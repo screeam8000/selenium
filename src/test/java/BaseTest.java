@@ -50,5 +50,14 @@ public class BaseTest {
         click(select.findElement(By.xpath("" + value + "")));
     }
 
-
+    public boolean isElementPresent(By locator) {
+        getDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        try {
+            return getDriver().findElement(locator).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        } finally {
+            getDriver().manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+        }
+    }
 }

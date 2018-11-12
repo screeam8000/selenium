@@ -12,24 +12,14 @@ public class DepositTest extends BaseTest {
         driver.get("https://www.raiffeisen.ru/");
         acceptRegion();
 
-//        HashMap<String, String> testData = new HashMap<>();
-//        testData.put("Фамилия", "Имя");
-//        testData.put("Фамилия", "Имя");
-//        testData.put("Фамилия", "Имя");
-//        testData.put("Фамилия", "Имя");
-//        testData.put("Фамилия", "Имя");
-//        testData.put("Фамилия", "Имя");
-//
-//        HashMap<String, String> testCheckData = new HashMap<>()
-
-
     }
 
     private void acceptRegion (){
         click(getDriver().findElement(By.xpath("//*[text()='Да']")));
     }
 
-    private void DepositTest (){
+    @Test
+    public void depositTest (){
         WebDriver driver = getDriver();
         driver.get("https://www.raiffeisen.ru/");
         acceptRegion();

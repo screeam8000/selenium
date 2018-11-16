@@ -40,11 +40,6 @@
             <version>RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.selenium.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.12.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
             <version>3.11.0</version>

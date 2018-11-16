@@ -17,7 +17,7 @@ public class CheckRegionTest extends BaseTest {
 //        click(driver.findElement(By.cssSelector("#icon-house")));
         click(driver.findElement(By.xpath("//a[@class='region-list__city' and contains(text(), 'Владимир')]")));
 
-        Assert.assertEquals("ВЛАДИМИР",
+        Assert.assertEquals("МОСКВА",
                 driver.findElement(By.xpath("//a[@class='sec-menu__link sm-i region-active']")).getText());
 
         JavascriptExecutor js = (JavascriptExecutor) getDriver();

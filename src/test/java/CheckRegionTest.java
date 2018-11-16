@@ -3,6 +3,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import pages.MainPage;
 
 
 public class CheckRegionTest extends BaseTest {
@@ -13,11 +14,13 @@ public class CheckRegionTest extends BaseTest {
         WebDriver driver = getDriver();
         driver.get("https://www.raiffeisen.ru/");
         acceptRegion();
+        MainPage mainPage = new MainPage();
 
 //        click(driver.findElement(By.cssSelector("#icon-house")));
-        click(driver.findElement(By.xpath("//a[@class='region-list__city' and contains(text(), 'Владимир')]")));
+//        click(driver.findElement(By.xpath("//a[@class='region-list__city' and contains(text(), 'Владимир')]")));
+        mainPage.city.click();
 
-        Assert.assertEquals("МОСКВА",
+        Assert.assertEquals("ВЛАДИМИР",
                 driver.findElement(By.xpath("//a[@class='sec-menu__link sm-i region-active']")).getText());
 
         JavascriptExecutor js = (JavascriptExecutor) getDriver();

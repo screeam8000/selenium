@@ -1,4 +1,3 @@
-import junit.framework.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +10,6 @@ public class DepositTest extends BaseTest {
         WebDriver driver = getDriver();
         driver.get("https://www.raiffeisen.ru/");
         acceptRegion();
-
     }
 
     private void acceptRegion (){

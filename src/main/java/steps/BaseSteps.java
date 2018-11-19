@@ -2,7 +2,9 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import util.DriverManager;
@@ -31,11 +33,10 @@ public class BaseSteps {
         DriverManager.quitDriver();
     }
 
-    public void elementIsExistAndEqual (WebElement element, String value){
-        if (element.getText().equalsIgnoreCase(value)) {
-            return;
-        }
-        Assert.fail(value + " не найден");
+    @Then ("^Скролл в конец страницы$")
+    public void scrollToBottomPage() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 
 }

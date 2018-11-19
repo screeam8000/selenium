@@ -19,6 +19,8 @@ public class MainPage{
             public WebElement servicequality;
     @FindBy(xpath = "//a[@href='/about/anticorr/']")
             public WebElement anticorr;
+    @FindBy(xpath = "//*[text()='Нет']")
+            public WebElement cities;
 
 
     public MainPage() {

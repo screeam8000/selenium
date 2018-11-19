@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.TestProperties;
 
@@ -26,10 +27,10 @@ public class BaseTest {
         //System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
 //        System.setProperty("webdriver.chrome.driver", "drv/chromedriver");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 60);
+        wait = new WebDriverWait(driver, 20);
 
-        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
         driver.manage().timeouts().implicitlyWait(Long.parseLong(properties.getProperty("implicitlyWait")), TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(Long.parseLong(properties.getProperty("pageLoadTimeout")), TimeUnit.SECONDS);
@@ -58,9 +59,9 @@ public class BaseTest {
         element.sendKeys(Keys.TAB );
     }
 
-    public void selectInput(WebElement select, String value){
+    public void selectInput(WebElement select, WebElement select_input, String value){
         select.click();
-        click(select.findElement(By.xpath("" + value + "")));
+        select_input.sendKeys(value + Keys.ENTER);
     }
 
     public boolean isElementPresent(By locator) {

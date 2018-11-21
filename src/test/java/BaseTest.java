@@ -3,9 +3,8 @@ import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import util.TestProperties;
+import javaCourse.util.TestProperties;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;

@@ -10,6 +10,13 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <file.encoding>UTF-8</file.encoding>
+        <aspectj.version>1.8.10</aspectj.version>
+        <compiler.version>1.8</compiler.version>
+        <selenium.version>3.8.0</selenium.version>
+        <allure.version>2.7.0</allure.version>
+
     </properties>
 
 <build>
@@ -137,6 +144,22 @@
         </dependency>
 
     </dependencies>
+    <reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-cucumber2-jvm</artifactId>
+                <version>2.7.0</version>
+                <configuration>
+                    <reportVersion>2.6.0</reportVersion>
+                    <resultsPattern>${project.build.directory}/allure-results</resultsPattern>
+                    <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
 
 </project>
 

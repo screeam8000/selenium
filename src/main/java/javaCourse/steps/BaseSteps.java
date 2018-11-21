@@ -1,14 +1,12 @@
-package steps;
+package javaCourse.steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import util.DriverManager;
-import util.TestProperties;
+import javaCourse.util.DriverManager;
+import javaCourse.util.TestProperties;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -31,12 +29,6 @@ public class BaseSteps {
     @After
     public void afterMethod() {
         DriverManager.quitDriver();
-    }
-
-    @Then ("^Скролл в конец страницы$")
-    public void scrollToBottomPage() {
-        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 
 }

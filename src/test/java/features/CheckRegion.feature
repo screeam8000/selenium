@@ -1,9 +1,11 @@
-@web
+#encoding: utf-8
+
+@web1
 Feature: CheckRegion
 
   Scenario: Change Region
 
-    Given Выбор региона
+    Given Выбран не мой регион
     Then Выбор города
     Then Проверяет корректность выбранного города
     Then Скролл в конец страницы

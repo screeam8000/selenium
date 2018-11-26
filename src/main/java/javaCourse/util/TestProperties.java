@@ -5,16 +5,45 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+
+//
+//public class TestProperties {
+//    private final Properties properties = new Properties();
+//
+//    private static TestProperties INSTANCE = null;
+//
+//    private TestProperties(){
+//        System.setProperty("environment", "environment");
+//        try {
+//            properties.load(new FileInputStream(new File("./" + System.getProperty("environment") + ".properties")));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    public static TestProperties getInstance() {
+//        if (INSTANCE == null){
+//            INSTANCE = new TestProperties();
+//        }
+//        return INSTANCE;
+//    }
+//
+//    public Properties getProperties() {
+//        return properties;
+//    }
+//}
+
 public class TestProperties {
     private final Properties properties = new Properties();
 
     private static TestProperties INSTANCE = null;
 
-    private TestProperties(){
+    private TestProperties() {
         System.setProperty("environment", "application");
 
         try {
-            properties.load(new FileInputStream(new File("C:/Projects/selenium/" + System.getProperty("environment") + ".properties")));
+//            properties.load(new FileInputStream(new File("C:/Projects/selenium/" + System.getProperty("environment") + ".properties")));
+            properties.load(new FileInputStream(new File("/Users/scream8000/IdeaProjects/selenium/" + System.getProperty("environment") + ".properties")));
             //почему не работает системная переменная
 //            properties.load(new FileInputStream(new File("C:/Projects/selenium/application.properties")));
         } catch (IOException e) {
@@ -24,7 +53,7 @@ public class TestProperties {
     }
 
     public static TestProperties getInstance() {
-        if (INSTANCE == null){
+        if (INSTANCE == null) {
             INSTANCE = new TestProperties();
         }
         return INSTANCE;
@@ -34,3 +63,4 @@ public class TestProperties {
         return properties;
     }
 }
+

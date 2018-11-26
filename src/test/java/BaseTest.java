@@ -22,9 +22,9 @@ public class BaseTest {
 
 //        WebDriver driver = DriverManager.getDriver();
 
-        System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
         //System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
-//        System.setProperty("webdriver.chrome.driver", "drv/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drv/chromedriver");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 20);
 

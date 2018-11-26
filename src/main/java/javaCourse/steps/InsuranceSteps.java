@@ -14,26 +14,27 @@ public class InsuranceSteps {
     }
 
 
-    @Then ("^переход по ссылке В путешествие$")
+    @Then("^переход по ссылке В путешествие$")
     public void clickTravelLink() {
         insurancePage.inTravelLink.click();
 
     }
 
-    @Then ("^переход по ссылке Вояж$")
+    @Then("^переход по ссылке Вояж$")
     public void clickVoyage() {
         insurancePage.voyage.click();
     }
 
-    @Then ("^нажать на кнопку Оставить заявку$")
+    @Then("^нажать на кнопку Оставить заявку$")
     public void pressButtonSendApp() {
         insurancePage.submitButton.click();
     }
 
-    @Then ("^заполнить данные по заявке$")
+    @Then("^заполнить данные по заявке$")
     public void fillFields(DataTable fields) throws Exception {
         fields.asMap(String.class, String.class).forEach(
                 (k, v) -> {
+//                    System.out.format("KEY %S VAL %s\n", k, v);
                     try {
                         fillField(k, v);
                     } catch (Exception e) {
@@ -43,7 +44,7 @@ public class InsuranceSteps {
         );
     }
 
-    @Then ("^проставить чек-бокс$")
+    @Then("^проставить чек-бокс$")
     public void fillCheckBox() {
         insurancePage.checkBox.click();
     }

@@ -34,7 +34,6 @@ public class InsuranceSteps {
     public void fillFields(DataTable fields) throws Exception {
         fields.asMap(String.class, String.class).forEach(
                 (k, v) -> {
-//                    System.out.format("KEY %S VAL %s\n", k, v);
                     try {
                         fillField(k, v);
                     } catch (Exception e) {

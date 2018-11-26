@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
         glue = {"javaCourse"},
         plugin = {"json:target/cucumber-report.json",
                 "pretty",
-                "html:target/cucumber-reports"
+                "html:target/cucumber-reports",
+                "javaCourse.reporter.AllureReporter"
 //                "return:return.txt"
         },
         tags = {"@web"})

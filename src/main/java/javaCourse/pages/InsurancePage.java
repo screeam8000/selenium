@@ -1,6 +1,7 @@
 package javaCourse.pages;
 
 import javaCourse.annotation.FieldName;
+import javaCourse.reporter.AllureReporter;
 import javaCourse.util.DriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -71,8 +72,6 @@ public class InsurancePage extends BasePageObject {
     public WebElement inTravelLink;
 
     public void fillField(String name, String value) throws Exception {
-//        System.out.println("NAME");
-//        System.out.println(name);
         WebElement element = getField(name);
         JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
         js.executeScript("return arguments[0].style.border='1px solid magenta';", element);
@@ -85,20 +84,19 @@ public class InsurancePage extends BasePageObject {
         Class example = Class.forName("javaCourse.pages.InsurancePage");
         List<Field> fields = Arrays.asList(example.getFields());
         for (Field field : fields) {
-            // field.getAnnotation(FieldName.class)) returns null
             if (field.getAnnotation(FieldName.class) != null
                     && field.getAnnotation(FieldName.class).name().equals(name)) {
                 WebDriver webDriver = DriverManager.getDriver();
-                TimeUnit.SECONDS.sleep(3l);
                 return webDriver.findElement(By.xpath(field.getAnnotation(FindBy.class).xpath()));
             }
         }
         Assert.fail("Не объявлен элемент с наименованием " + name);
+        AllureReporter.takeScreenshot();
+        //как сохранить скриншот с этим методом
         return null;
     }
 
     public InsurancePage() {
         PageFactory.initElements(DriverManager.getDriver(), this);
-        //pagefactory драйвер который инцилизирует страницу что бы обратиться к элементам
     }
 }

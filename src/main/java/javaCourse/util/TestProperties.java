@@ -43,9 +43,9 @@ public class TestProperties {
 
         try {
 //            properties.load(new FileInputStream(new File("C:/Projects/selenium/" + System.getProperty("environment") + ".properties")));
-            properties.load(new FileInputStream(new File("/Users/scream8000/IdeaProjects/selenium/" + System.getProperty("environment") + ".properties")));
+//            properties.load(new FileInputStream(new File("/Users/scream8000/IdeaProjects/selenium/" + System.getProperty("environment") + ".properties")));
             //почему не работает системная переменная
-//            properties.load(new FileInputStream(new File("C:/Projects/selenium/application.properties")));
+            properties.load(new FileInputStream(new File("C:/Projects/selenium/application.properties")));
         } catch (IOException e) {
             e.printStackTrace();
 //            C:\Projects\selenium\application.properties

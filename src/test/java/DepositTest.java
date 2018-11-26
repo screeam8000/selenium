@@ -3,12 +3,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
 import java.util.HashMap;
-
-import static com.codeborne.selenide.Selenide.sleep;
-
 
 public class DepositTest extends BaseTest {
 

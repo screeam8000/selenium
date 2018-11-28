@@ -10,7 +10,6 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "html:target/cucumber-reports",
                 "javaCourse.reporter.AllureReporter"
-//                "return:return.txt"
         },
         tags = {"@web"})
 

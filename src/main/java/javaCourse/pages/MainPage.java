@@ -29,6 +29,10 @@ public class MainPage extends BasePageObject {
 
     @FindBy(xpath = "//li/a[contains(text(), 'Страхование')]")
     public WebElement insuranceLink;
+    @FindBy(xpath = "//li/a[contains(text(), 'Ипотека')]")
+    public WebElement mortgageLink;
+    @FindBy (xpath = "//a[contains(text(), 'Ипотечный калькулятор')]")
+    public WebElement mortgageCalc;
 
     public MainPage() {
         PageFactory.initElements(DriverManager.getDriver(), this);

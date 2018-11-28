@@ -1,6 +1,6 @@
 #encoding: utf-8
 
-@web
+@web1
 Feature: InsurancePage
 
   Scenario: CheckInsurance

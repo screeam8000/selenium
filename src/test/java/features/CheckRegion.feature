@@ -1,6 +1,6 @@
 #encoding: utf-8
 
-@web1
+@web
 Feature: CheckRegion
 
   Scenario: Change Region

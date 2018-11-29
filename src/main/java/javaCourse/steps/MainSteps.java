@@ -20,7 +20,8 @@ public class MainSteps {
     }
 
     @Then("^Выбор города$")
-    public void cityClick() {
+    public void cityClick() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(2l);
         mainPage.city.click();
     }
 

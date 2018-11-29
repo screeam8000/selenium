@@ -68,7 +68,7 @@ public class InsurancePage extends BasePageObject {
     public WebElement voyage;
 
     @FindBy(xpath = "//a[@href='/retail/insurance/everyday/travel/vbc/']")
-    @FieldName(name = "ASDFFGHHJ")
+    @FieldName(name = "В путешествие")
     public WebElement inTravelLink;
 
     public void fillField(String name, String value) throws Exception {

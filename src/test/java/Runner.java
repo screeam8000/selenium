@@ -11,7 +11,9 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports",
                 "javaCourse.reporter.AllureReporter"
         },
-        tags = {"@web"})
+        tags = {
+          "@web"
+        })
 
 
 public class Runner {
